@@ -58,11 +58,20 @@ section {
 
 #inicio {
     text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    
 }
 
 #inicio img {
-    width: 100%;
     height: auto;
+    width: 15%;
+    filter: invert(0%);
+}
+
+
+#conocimientos{
+    text-align: center;
 }
 
 .proyectos-container {
@@ -98,7 +107,10 @@ section {
 .proyecto:hover .descripcion {
     opacity: 1;
 }
-
+a:hover{
+    font-size: large;
+    font-weight: bold;
+}
 .proyecto button {
     background-color: #fff;
     border: none;
@@ -127,17 +139,19 @@ section {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    .nav-container {
+        width: 90%;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: row; /* Mantener en fila incluso en pantallas pequeñas */
         gap: 5px;
     }
 
     nav a {
-        margin: 5px 0;
-    }
-
-    .nav-container {
-        width: 90%;
+        margin: 0 5px;
     }
 
     nav button {
@@ -152,5 +166,18 @@ section {
 
     .proyecto {
         width: 80%;
+    }
+
+    /* Ajustar el tamaño de la fuente en pantallas pequeñas */
+    body {
+        font-size: 12px;
+    }
+
+    #inicio {
+        font-size: 12px;
+    }
+
+    #conocimientos {
+        font-size: 12px;
     }
 }
